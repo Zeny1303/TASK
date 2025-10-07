@@ -65,7 +65,21 @@ Where:
 - X → Each possible outcome  
 - P(X) → Probability of that outcome  
 
-✅ Example (Unequal Probabilities):
+ Example
+ 1. When equal Probabilities:
+ If X ={1, 2, 3, 4, 5, 6}  
+and  
+P(1)=1/6, P(2)=1/6, P(3)=1/6, P(4)=1/6, P(5)=1/6, P(6)=1/6
+Then ,
+```
+E[X] = 1*(1/6) + 2*(1/6) + 3*(1/6) + 4*(1/6) + 5*(1/6) + 6*(1/6)
+E[X] = 3.5
+```
+Here ```
+ E[x]=X̄
+```
+because in this case the probabilities were equal .
+ 2.When Unequal Probabilities:
 
 If X = {1, 2, 3, 4, 5, 6}  
 and  
@@ -83,18 +97,60 @@ E[X] = 3.7
 X̄ = 3.5
 ```
 
----
+# Question3. Law of the Unconscious Statistician (LOTUS)
 
-## 🔹 Key Insight
-When all probabilities are equal:
-```
-E[X] = X̄
-```
-
-Otherwise, the expected value differs from the average depending on the probability distribution.
+## Definition
+**LOTUS** stands for **Law of the Unconscious Statistician**.  
+It allows us to compute the **expected value of a function of a random variable** without first finding the distribution of that function.
 
 ---
 
+## 🔹 Formula
+
+### For Discrete Random Variables:
+```
+E[g(X)] = Σ g(x) * P(X = x)
+```
+
+### For Continuous Random Variables:
+```
+E[g(X)] = ∫ g(x) * f_X(x) dx
+```
+
+Where:
+- g(X) → Function of the random variable X  
+- P(X = x) → Probability mass function (PMF)  
+- f_X(x) → Probability density function (PDF)
+
+---
+
+## 🔹 Intuitive Explanation
+To find E[g(X)], you **don’t need to find the distribution of g(X)**.  
+You can compute it directly using the distribution of X.
+
+---
+
+## ✅ Example (Discrete Case)
+If X = {1, 2, 3} with probabilities {0.2, 0.5, 0.3}, and we want E[X²]:
+
+```
+E[X²] = Σ x² * P(X = x)
+       = 1²(0.2) + 2²(0.5) + 3²(0.3)
+       = 0.2 + 2 + 2.7 = 4.9
+```
+
+---
+
+## ✅ Example (Continuous Case)
+If X has PDF f(x) = 2x for 0 < x < 1, and we want E[X²]:
+
+```
+E[X²] = ∫₀¹ x² * 2x dx
+       = 2 ∫₀¹ x³ dx
+       = 2 * (1/4) = 0.5
+```
+
+---
 
 
 
