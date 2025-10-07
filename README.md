@@ -264,6 +264,7 @@ Error ∝ 1/underroot N
 
 where N is the number of training examples.
 c.Error decreases with training data size 
+
 ---
 
 ## Question 9 . Consider a quiz game where a person is given two questions and must decide which question to answer first. 
