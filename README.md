@@ -263,6 +263,7 @@ Error ∝ 1/underroot N
 ```
 
 where N is the number of training examples.
+
 c.Error decreases with training data size 
 
 ---
