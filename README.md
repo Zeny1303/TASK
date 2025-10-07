@@ -172,10 +172,9 @@ For a set of variables X1,X2,...,Xn, the joint probability distribution
 P(X1,X2,...,Xn) gives the probability of all these variables occuring  together. 
 
 Generative Model tries to learn Joint Probability Distribution P(X1,X2,...Xn) of the data  by reach close to **The True probability** i.e the actual probability distribbution of the real data .It tells us how the real-world data is naturally distributed.
-$$
-P_\theta(X) \approx P_\text{real}(X)
-$$
-
+```
+P<sub>real</sub>(X)=P<sub>theta</sub>
+```
  
 
 ---
