@@ -197,14 +197,14 @@ $$
 P_{\theta}(X)
 $$  
 
-Here, \( \theta \) means the parameters of the model (like weights and biases).  
+Here, \( θ\) means the parameters of the model (like weights and biases).  
 The goal during training is to keep adjusting these parameters until:
 
 $$
 P_{\theta}(X) \approx P_{\text{real}}(X)
 $$  
 
-So, when both become close enough, it means the model has truly learned the real-world data distribution — and that’s when it can start generating new, realistic samples.
+So, when both become close enough, it means the model has truly learned the real-world data distribution and that’s when it can start generating new, realistic samples.
 
 ---
 
@@ -224,25 +224,8 @@ $$
 P(X_1, X_2, ..., X_n) = P(X_1) \times P(X_2 | X_1) \times P(X_3 | X_1, X_2) \times ... \times P(X_n | X_1, X_2, ..., X_{n-1})
 $$  
 
-That’s exactly how models like **GPT** generate text — one word at a time, predicting the next word based on all the previous ones.  
+That’s exactly how models like **GPT** generate text  one word at a time, predicting the next word based on all the previous ones.  
 Similarly, image-based models like **Diffusion Models** or **VAEs** generate pixels or features step by step to create complete images.
-
----
-
-### **Simple Understanding**
-
-You can think of it like this — the model learns the *pattern of the data world*.  
-It doesn’t just memorize examples, but it understands *how data behaves*.  
-Once it learns the structure, it can “imagine” new data that follows the same logic.
-
----
-
-### **In Summary**
-
-A **Generative Model** uses **Joint Probability Distribution** to learn how different parts of data depend on each other.  
-By aligning its own learned probability \( P_{\theta}(X) \) with the real data probability \( P_{\text{real}}(X) \), the model becomes capable of creating new data that feels real and meaningful.
-
-> ✨ In short — Generative Models don’t just copy data, they *learn how the world works* and then *create something new from it.*
 
 
 ---
