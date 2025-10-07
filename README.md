@@ -162,20 +162,25 @@ E[X²] = ∫₀¹ x² * 2x dx
 
 ---
 
-## Question 5 . How Generative Model uses Joint Probability Distribution for generating new data
+## Question 5. How Generative Model uses Joint Probability Distribution for generating new data
 
-***Generative Models*** is a type of model in machine learning that learns how data is generated , therefore it can create new data .
-For examples , GPT such as ChatGPT , claude , Grok , every product is trained on such large amount of data which help these models to learn and produce new data on knowledge they acquired from past used data for training them .
+**Generative Models** are a type of machine learning model that learn how data is generated, so they can create new data. For example, GPT models such as ChatGPT, Claude, and Grok are trained on large amounts of data, which helps them learn patterns from past data and generate new, realistic outputs.
 
-***Joint Probability Distribution***  
-For a set of variables X1,X2,...,Xn, the joint probability distribution 
-P(X1,X2,...,Xn) gives the probability of all these variables occuring  together. 
+**Joint Probability Distribution**  
+For a set of variables X1, X2, ..., Xn, the joint probability distribution 
 
-Generative Model tries to learn Joint Probability Distribution P(X1,X2,...Xn) of the data  by reach close to **The True probability** i.e the actual probability distribbution of the real data .It tells us how the real-world data is naturally distributed.
-```
-P<sub>real</sub>(X)=P<sub>theta</sub>
-```
- 
+$$
+P(X_1, X_2, ..., X_n)
+$$
+
+gives the probability of all these variables occurring together.
+
+A generative model tries to learn the joint probability distribution \(P(X_1, X_2, ..., X_n)\) of the data so that it is close to the **true probability** \(P_\text{real}(X)\), which represents how the real data is naturally structured.  
+
+The model's probability \(P_\theta(X)\) is the distribution predicted by the model, parameterized by θ. It represents what the model thinks is likely based on the training data it has seen. The goal during training is to adjust θ so that \(P_\theta(X)\) gets as close as possible to \(P_\text{real}(X)\).  
+
+By learning this joint probability distribution, the model can generate new data that follows the same patterns as real data.
+
 
 ---
 
