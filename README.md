@@ -54,7 +54,7 @@ Where:
 - ΣX → Sum of all values  
 - n → Number of values  
 
-**✅ Example (Equal Probabilities):**  
+**Example (Equal Probabilities):**  
 If X = {1, 2, 3, 4, 5, 6}  
 ```
 X̄ = (1 + 2 + 3 + 4 + 5 + 6) / 6 = 3.5
@@ -142,7 +142,7 @@ You can compute it directly using the **distribution of X**.
 
 ---
 
-### ✅ Example (Discrete Case)
+###  Example (Discrete Case)
 If X = {1, 2, 3} with probabilities {0.2, 0.5, 0.3}, and we want E[X²]:  
 ```
 E[X²] = Σ x² * P(X = x)
@@ -152,7 +152,7 @@ E[X²] = Σ x² * P(X = x)
 
 ---
 
-### ✅ Example (Continuous Case)
+###  Example (Continuous Case)
 If X has PDF f(x) = 2x for 0 < x < 1, and we want E[X²]:  
 ```
 E[X²] = ∫₀¹ x² * 2x dx
