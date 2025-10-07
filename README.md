@@ -218,44 +218,55 @@ So, when both become close enough, it means the model has truly learned the real
 
 ---
 
-Gmail’s Spam Filter (Generative Approach)
-Let’s imagine Gmail’s AI model is learning from millions of emails.
-It looks at both the content and the label (spam or not spam).
-The model is a generative model, meaning it wants to learn:
+***Gmail’s Spam Filter (Generative Approach)***
+Let’s imagine Gmail’s AI model is learning from millions of emails.It looks at both the content and the label (spam or not spam).The model is a generative model, meaning it wants to learn:
+```
 [
 P(X, Y) = P(Y) \times P(X|Y)
 ]
+```
 where:
 • ( Y ) = label (spam / not spam)
 • ( X ) = the words, structure, and style of the email
+
 Email 1 — Spam
+
 Subject: Congratulations! You have won $1000 cash prize
+
 Body:
 Dear user,
 You have been selected as one of our lucky winners!
 Click the link below to claim your cash reward.
 Offer valid for 24 hours only.
-Label: Spam
+**Label: Spam**
+
+
 Email 2 — Spam
 Subject: Limited-time offer on loan approval
+
 Body:
 Get instant loan approval with zero interest.
 Apply now and receive money directly in your account.
 Don't miss this special offer.
-Label: Spam
+**Label: Spam**
+
 Email 3 — Not Spam
+
 Subject: Project meeting at 10 AMBody:
+
 Hi team,
 Please join the project discussion meeting at 10 AM tomorrow.
 We will review the progress report and plan next steps.
-Label: Not Spam
+**Label: Not Spam**
+
 Email 4 — Not Spam
+
 Subject: Office maintenance schedule
 Body:
 Dear employees,
 The office will be closed for maintenance work on Saturday.
 Please plan your tasks accordingly.
-Label: Not Spam
+**Label: Not Spam**
 What the Model Learns (Joint Distribution)
 Now the model studies both the email content and label.
 It learns the joint probability ( P(X, Y) ) — which captures:
@@ -277,13 +288,18 @@ It also learns priors:
 This means:
 About 40% of emails are spam, and they frequently contain words like win, offer, click, money.
 60% are normal, containing words like project, meeting, report.
+
 HERE AS WE KNOW OUR MODEL IS TRAINED ON PREVIOUS DATASETS SO IT CAN TELL WHICH
 MAIL IS SAPM AND WHICH ONE IS NOT SO NOW WE GENERATE SOME RANDOM
 COMBINATIONS OF SENTENCES AND GIVE IT TO OUR MODEL FOR TESTING AND IF IT SUITS
 AND NOT SPAM THEN IT WILL BE CONSIDERED AS THE SUCCESSFULLY GENERATED DATA
+
 The Generated Email (Spam Example)
+
 Subject: Special offer! Win easy money today
+
 Body:
+
 Dear customer,
 You have a special chance to win big money instantly!
 Click the link below to claim your offer before it expires.
@@ -309,13 +325,16 @@ The joint probability distribution ensured that:
 • Spam-like words appeared together more often,
 • Work-related words stayed out of the message,
 • And the final message matched what spam typically looks like.
+
 Generated Email (Not Spam Example)
 Subject: Project meeting report
 Body:
+
 Dear team,
 Please attend the project meeting tomorrow morning.
 We will discuss the progress report and upcoming deadlines.
 This one also looks completely natural — but businesslike, not spammy.
+
 SO HERE YOU CAN SEE EXAMPLE OF SUCCESSFUL GENERATED DATA
 
 
