@@ -267,12 +267,17 @@ Dear employees,
 The office will be closed for maintenance work on Saturday.
 Please plan your tasks accordingly.
 **Label: Not Spam**
+
 What the Model Learns (Joint Distribution)
 Now the model studies both the email content and label.
+
 It learns the joint probability ( P(X, Y) ) — which captures:
+
 • What kinds of words and styles appear in spam,
 • What kinds appear in normal work-related emails.
+
 From these, it estimates probabilities like:
+
 | Word | P(word | Spam) | P(word | Not Spam) |
 |------|----------------|------------------|
 | “win” | 0.7 | 0.02 |
@@ -284,15 +289,16 @@ From these, it estimates probabilities like:
 | “report” | 0.05 | 0.5 |
 | “dear” | 0.6 | 0.4 |
 | “money” | 0.5 | 0.1 |
+
 It also learns priors:
+
 This means:
+
 About 40% of emails are spam, and they frequently contain words like win, offer, click, money.
 60% are normal, containing words like project, meeting, report.
 
-HERE AS WE KNOW OUR MODEL IS TRAINED ON PREVIOUS DATASETS SO IT CAN TELL WHICH
-MAIL IS SAPM AND WHICH ONE IS NOT SO NOW WE GENERATE SOME RANDOM
-COMBINATIONS OF SENTENCES AND GIVE IT TO OUR MODEL FOR TESTING AND IF IT SUITS
-AND NOT SPAM THEN IT WILL BE CONSIDERED AS THE SUCCESSFULLY GENERATED DATA
+
+Here as we know our model is trained on previous dataset so it can tell which mail is spam and which one is not so now we generate some random combinations of sentences and give it to our model for testing and if it suits and not spam then it will be considered as the successfully generated data.
 
 The Generated Email (Spam Example)
 
@@ -304,23 +310,29 @@ Dear customer,
 You have a special chance to win big money instantly!
 Click the link below to claim your offer before it expires.
 Act now to secure your reward.
+
 This email was never seen before, yet it looks realistic and spammy.
 It was generated entirely by sampling from P(X,Y).
 Analyzing How It Was Generated
 Step What Happened Probability Used
+
 1 The model picked “Spam” as the category ( P(Y=\text{spam}) = 0.4 )
-2 Then sampled “win”, “offer”, “click”, “money”, “dear” from ( P(X
+
+2 Then sampled “win”, “offer”, “click”, “money”, “dear” from ( P(X))
+
 3 It skipped “meeting” and “project”
 because their spam likelihood was
 lowStep What Happened Probability Used
-4
-Combined selected words into a sentence using
+
+4 Combined selected words into a sentence using
 learned grammar patterns
 (from text structure in training
 data)
+
 5 Result = realistic spam message
 drawn from the learned joint
 distribution
+
 The joint probability distribution ensured that:
 • Spam-like words appeared together more often,
 • Work-related words stayed out of the message,
@@ -331,8 +343,10 @@ Subject: Project meeting report
 Body:
 
 Dear team,
+
 Please attend the project meeting tomorrow morning.
 We will discuss the progress report and upcoming deadlines.
+
 This one also looks completely natural — but businesslike, not spammy.
 
 SO HERE YOU CAN SEE EXAMPLE OF SUCCESSFUL GENERATED DATA
