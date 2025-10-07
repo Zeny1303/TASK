@@ -162,6 +162,24 @@ E[X²] = ∫₀¹ x² * 2x dx
 
 ---
 
+## Question 5 . How Generative Model uses Joint Probability Distribution for generating new data
+
+***Generative Models*** is a type of model in machine learning that learns how data is generated , therefore it can create new data .
+For examples , GPT such as ChatGPT , claude , Grok , every product is trained on such large amount of data which help these models to learn and produce new data on knowledge they acquired from past used data for training them .
+
+***Joint Probability Distribution***  
+For a set of variables X1,X2,...,Xn, the joint probability distribution 
+P(X1,X2,...,Xn) gives the probability of all these variables occuring  together. 
+
+Generative Model tries to learn Joint Probability Distribution P(X1,X2,...Xn) of the data  by reach close to **The True probability** i.e the actual probability distribbution of the real data .It tells us how the real-world data is naturally distributed.
+$$
+P_\theta(X) \approx P_\text{real}(X)
+$$
+
+ 
+
+---
+
 ## Question 9 . Consider a quiz game where a person is given two questions and must decide which question to answer first. Question 1 will be answered correctly with probability 0.8, and the person will then receive as prize $100, while question 2 will be answered correctly with probability 0.5, and the person will then receive as prize $200. If the first question attempted is answered incorrectly, the quiz terminates (the person is not allowed to attempt the second question). If the first question is answered correctly, the person is allowed to attempt the second question.Which question should be answered first to maximize the expected value of the total prize money received?
 ## ANSWER : The player should answer the 0.8-probability $100 question before the 0.5-probability $200 question.
 
